@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: webapi123
+spec:
+  to:
+    kind: Service
+    name: webapi123
+  port:
+    targetPort: 80

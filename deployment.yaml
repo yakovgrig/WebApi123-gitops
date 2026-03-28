@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi123
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapi123
+  template:
+    metadata:
+      labels:
+        app: webapi123
+    spec:
+      containers:
+      - name: webapi123
+        image: ghcr.io/yakovgrig/webapi123:latest
+        ports:
+        - containerPort: 8080
